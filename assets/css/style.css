@@ -147,13 +147,10 @@ p {
   padding-bottom: 0px;
 }
 
-section.section-block {
+#main-section {
   margin: 0 auto;
   max-width: 960px;
   background-color: #fff;
-}
-
-section.section-block#main-section {
   border-radius: 5px;
   padding-bottom: 15px;
   margin-bottom: 50px;
@@ -622,7 +619,64 @@ ul.bottom-nav li {
 /*------------------------------------------------------*/
 /* 5.1
 /*------------------------------------------------------*/
+.col,
+.col-sm,
+.col-sm-12,
+.col-md,
+.col-lg,
+.col-lg-6,
+.col-xl,
+.col-xl-4,
+.col-xl-12 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 
+@media (min-width: 576px) {
+  .col-sm-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+@media (min-width: 992px) {
+  .col-sm-12 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .col-lg-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  .col-lg-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  .col-xl-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
 
 /*------------------------------------------------------*/
 /*--------------[ 6.0 DESKTOP RESPONSIVE ]--------------*/

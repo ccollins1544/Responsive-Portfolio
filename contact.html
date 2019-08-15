@@ -19,7 +19,7 @@
 </head>
 
 <body class="page-template">
-  <header class="main-header">
+  <header id="main-header">
     <div class="container clearfix">
       <!-- Main Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light" id="main-nav">
@@ -46,19 +46,47 @@
     </div><!-- .container -->
   </header><!-- #main-header -->
 
-  <section id="main-section" class="content-wrapper">
-    <article class="container-fluid clearfix">
-      <div class="row first-row">
-        <h2 id="page-title">Contact</h2>
-      </div>
+  <div class="content-wrapper">
+    <section id="main-section">
+      <article class="container-fluid clearfix">
+        <div class="row first-row">
+          <h2 id="page-title">Contact</h2>
+        </div>
 
-      <hr />
+        <hr />
 
-      <div class="row">
+        <div class="row">
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="input-from-name">Name</label>
+                <input type="text" class="form-control" id="input-from-name" name="input-from-name"
+                  placeholder="Enter Your Name">
+              </div>
+              <div class="form-group col">
+                <label for="input-email">Email</label>
+                <input type="email" class="form-control" id="input-email" name="input-email"
+                  placeholder="Enter Your Email">
+              </div>
+            </div><!-- .form-row -->
 
-      </div><!-- .row -->
-    </article>
-  </section><!-- #main-section -->
+            <div class="form-group">
+              <label for="input-subject">Subject</label>
+              <input type="text" class="form-control" id="input-subject" name="input-subject" placeholder="Subject">
+            </div><!-- .form-group -->
+
+            <div class="form-group">
+              <label for="input-message">Message</label>
+              <textarea type="text" class="form-control" id="input-message" name="input-message"
+                placeholder="Enter Your Message" rows="5"></textarea>
+            </div><!-- .form-group -->
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form><!-- #contact-form -->
+        </div><!-- .row -->
+
+      </article>
+    </section><!-- #main-section -->
+  </div><!-- .content-wrapper -->
 
   <footer id="main-footer">
     <div class="footer-nav">
