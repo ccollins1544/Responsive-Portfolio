@@ -1,0 +1,47 @@
+/** 
+ * ipad CSS 
+ * >= 768px
+ * Author:  Christopher Collins
+ * Version: 1.0
+ * License: none (public domain)
+ */
+/*===============[ TABLE OF CONTENTS ]===============
+1.0 IPAD Responsive
+  1.1 max-width: 768px
+  1.2 @media only screen and (max-width: 768px)
+ 
+/*------------------------------------------------------*/
+/*--------------[ 1.0 IPAD Responsive ]-----------------*/
+/*------------------------------------------------------*/
+/* 1.1 max-width: 768px
+/*------------------------------------------------------*/
+
+/* 1.2 @media only screen and (max-width: 768px)
+/*------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+
+  /** STICKY FOOTER 
+  * section margin 50px + footer height 83px = 133px
+  */
+  .content-wrapper {
+      min-height: calc(100vh - 133px);
+  }
+
+  #main-footer {
+      height: 83px;
+  }
+
+  #main-footer .footer-nav {
+      padding-right: 0px;
+  }
+
+  #main-footer .footer-nav .container {
+      float: none;
+      width: 100%;
+      max-width: 100%;
+  }
+
+  ul.bottom-nav {
+      float: none;
+  }
+}
