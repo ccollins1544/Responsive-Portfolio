@@ -1,7 +1,7 @@
 /** 
  * MAIN CSS
  * Author:  Christopher Collins
- * Version: 2.4
+ * Version: 2.4.2
  * License: none (public domain)
  */
 /*===============[ TABLE OF CONTENTS ]===============
@@ -15,7 +15,6 @@
 
 2.0 PAGE NAVI
   2.1 Main Nav
-  2.2 Hamburger Nav
 
 3.0 MAIN LAYOUT INFO
   3.1 AVATAR Picture
@@ -24,22 +23,23 @@
   4.1 Footer Credits and Links
 
 5.0 GRID LAYOUT
-  5.1 Columns
+  5.1 Columns Base Style
+  5.2 Columns @media (min-width: 768px)
 
 6.0 DESKTOP RESPONSIVE
   6.1 @media only screen and (max-width: 1083px)
-  
+
 7.0 MOBILE RESPONSIVE
   7.1 @media only screen and (max-width: 991px)
-  7.2 @media only screen and (max-width: 820px)
-  7.3 @media only screen and (max-width: 768px)
-  7.4 @media only screen and (max-width: 600px)
-  7.5 @media only screen and (max-width: 531px)
-  7.6 @media only screen and (max-width: 420px)
-  7.7 @media only screen and (max-width: 330px)
+  7.2 @media only screen and (max-width: 980px)
+  7.3 @media only screen and (max-width: 820px)
+  7.4 @media only screen and (max-width: 768px)
+  7.5 @media only screen and (max-width: 640px)
+  7.6 @media only screen and (max-width: 600px)
+  7.7 @media only screen and (max-width: 531px)
+  7.8 @media only screen and (max-width: 420px)
+  7.9 @media only screen and (max-width: 330px)
   
-NOTE: Anything less than or equal to 980px will be in another stylesheet.
-
 /*------------------------------------------------------*/
 /*--------------[ 0.0 THEME COLORS ]--------------------*/
 /*------------------------------------------------------*/
@@ -98,11 +98,11 @@ body.page-template {
 }
 
 /** STICKY FOOTER 
- * section margin 50px + footer height 54px = 104px
+ * section margin 50px + footer height 55px = 105px
  */
 .content-wrapper {
     padding-top: 135px;
-    min-height: calc(100vh - 104px);
+    min-height: calc(100vh - 105px);
 }
 
 h1,
@@ -425,9 +425,9 @@ img {
     position: fixed;
     width: 100%;
     padding-bottom: 0px;
-    /* margin-bottom: 45px; */
     background-color: #fff;
     border-bottom: solid 2px var(--body-text);
+    z-index: 1;
 }
 
 nav.navbar {
@@ -505,43 +505,6 @@ nav.navbar .collapse {
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:hover {
     color: rgba(255, 255, 255, .8);
-}
-
-/* 2.2 Hamburger Nav
-/*------------------------------------------------------*/
-.dark-blue-text {
-    color: var(--accent-text);
-}
-
-#mobile-nav .nav-item {
-    text-align: right;
-}
-
-.navbar-toggler {
-    padding: .25rem .75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-}
-
-.collapse:not(.show) {
-    display: none;
-}
-
-.navbar-collapse {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.mr-auto,
-.mx-auto {
-    margin-right: auto !important;
 }
 
 /*------------------------------------------------------*/
@@ -653,66 +616,32 @@ ul.bottom-nav img {
 /*------------------------------------------------------*/
 /*--------------[ 5.0 GRID LAYOUT ]---------------------*/
 /*------------------------------------------------------*/
-/* 5.1 Columns
+/* 5.1 Columns Base Style
 /*------------------------------------------------------*/
-.col,
-.col-sm,
-.col-sm-12,
-.col-md,
-.col-lg,
-.col-lg-6,
-.col-xl,
-.col-xl-4,
-.col-xl-12 {
+.col-md-6,
+.col-12 {
     position: relative;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
 }
 
-@media (min-width: 576px) {
-    .col-sm-12 {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
 }
 
-
-
-@media (min-width: 992px) {
-    .col-sm-12 {
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
-    .col-lg-4 {
-        -ms-flex: 0 0 33.333333%;
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
-
-    .col-lg-6 {
+/* 5.2 Columns @media (min-width: 768px)
+/*------------------------------------------------------*/
+@media (min-width: 768px) {
+    .col-md-6 {
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         max-width: 50%;
     }
 }
 
-@media (min-width: 1200px) {
-    .col-xl-4 {
-        -ms-flex: 0 0 33.333333%;
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
-
-    .col-xl-12 {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
 
 /*------------------------------------------------------*/
 /*--------------[ 6.0 DESKTOP RESPONSIVE ]--------------*/
@@ -733,26 +662,20 @@ ul.bottom-nav img {
     }
 }
 
+
+
 /*------------------------------------------------------*/
 /*--------------[ 7.0 MOBILE RESPONSIVE ]---------------*/
 /*------------------------------------------------------*/
 /* 7.1 @media only screen and (max-width: 991px)
 /*------------------------------------------------------*/
-#mobile-nav {
-    display: none;
-}
-
 @media only screen and (max-width: 991px) {
-    /* #main-nav {
-        display: none;
-    } */
-
-    #mobile-nav {
-        display: flex;
-    }
-
     nav.navbar {
         background-color: var(--accent-text);
+    }
+
+    section.section-block#main-section {
+        border-radius: 0px;
     }
 
     .navbar-light .navbar-toggler {
@@ -771,9 +694,22 @@ ul.bottom-nav img {
     }
 }
 
-/* 7.2 @media only screen and (max-width: 820px)
+/* 7.2 @media only screen and (max-width: 980px) 
 /*------------------------------------------------------*/
 @media only screen and (max-width: 820px) {
+    section.section-block#main-section {
+        padding: 0px;
+        max-width: 980px;
+    }
+}
+
+/* 7.3 @media only screen and (max-width: 820px)
+/*------------------------------------------------------*/
+@media only screen and (max-width: 820px) {
+    .content-wrapper {
+        padding-top: 200px;
+    }
+
     nav.navbar .collapse {
         flex-direction: column;
     }
@@ -799,14 +735,18 @@ ul.bottom-nav img {
     }
 }
 
-/* 7.3 @media only screen and (max-width: 768px)
+/* 7.4 @media only screen and (max-width: 768px)
 /*------------------------------------------------------*/
 @media only screen and (max-width: 768px) {
+    #main-header {
+        position: relative;
+    }
 
     /** STICKY FOOTER 
     * section margin 50px + footer height 83px = 133px
     */
     .content-wrapper {
+        padding-top: 40px;
         min-height: calc(100vh - 133px);
     }
 
@@ -829,7 +769,29 @@ ul.bottom-nav img {
     }
 }
 
-/* 7.4 @media only screen and (max-width: 600px)
+
+/* 7.5 @media only screen and (max-width: 640px)
+/*------------------------------------------------------*/
+@media only screen and (max-width: 640px) {
+    #page-title {
+        margin: 0 auto;
+    }
+
+    .contact-message {
+        text-align: center;
+    }
+
+    .avatar_image {
+        float: none;
+        margin: 0 0 20px 0;
+    }
+
+    .avatar_image .image_wrap {
+        width: 75%;
+    }
+}
+
+/* 7.6 @media only screen and (max-width: 600px)
 /*------------------------------------------------------*/
 @media only screen and (max-width: 600px) {
 
@@ -850,7 +812,7 @@ ul.bottom-nav img {
 
 }
 
-/* 7.5 @media only screen and (max-width: 531px)
+/* 7.7 @media only screen and (max-width: 531px)
 /*------------------------------------------------------*/
 @media only screen and (max-width: 531px) {
     .navbar-brand {
@@ -859,24 +821,15 @@ ul.bottom-nav img {
 }
 
 
-/* 7.6 @media only screen and (max-width: 420px)
+/* 7.8 @media only screen and (max-width: 420px)
 /*------------------------------------------------------*/
 @media only screen and (max-width: 420px) {
     .navbar-brand {
         font-size: 1.5em;
     }
-
-    #page-title {
-        margin: 0 auto;
-    }
-
-    .avatar_image {
-        float: none;
-        margin: 0 0 20px 0;
-    }
 }
 
-/* 7.7 @media only screen and (max-width: 330px)
+/* 7.9 @media only screen and (max-width: 330px)
 /*------------------------------------------------------*/
 @media only screen and (max-width: 360px) {
     .navbar-brand {
