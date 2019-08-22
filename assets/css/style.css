@@ -534,6 +534,7 @@ nav.navbar .collapse {
     animation-name: navbar_brand_animation;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
 }
 
@@ -595,6 +596,7 @@ nav.navbar .collapse {
     animation-name: lnkedin_animation;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
 }
 
@@ -630,6 +632,7 @@ nav.navbar .collapse {
     animation-name: devio_animation;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
 }
 
@@ -657,13 +660,15 @@ nav.navbar .collapse {
 }
 
 .fa-github:hover {
-    color: #959da5 -webkit-animation-name: github_animation;
+    color: #959da5;
+    -webkit-animation-name: github_animation;
     /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 2s;
     /* Safari 4.0 - 8.0 */
     animation-name: github_animation;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
 }
 
